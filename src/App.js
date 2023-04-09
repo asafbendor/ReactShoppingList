@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import TobuyList from './TobuyList';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+      <TobuyList 
+      color={`red`}
+      title={`vegetables`}
+      initialData={[`tomatoes`, `cucumbers`, `potatoes`]}
+      />
+        <TobuyList 
+      color={`blue`}
+      title={`fruits`}
+      initialData={[`apple`, `banana`, `orange`]}
+      />
+        <TobuyList 
+      color={`green`}
+      title={`meat`}
+      initialData={[`kabab`, `chicken`, `beef`]}
+      />
+      </div>
+    );
+  }
 }
 
 export default App;
